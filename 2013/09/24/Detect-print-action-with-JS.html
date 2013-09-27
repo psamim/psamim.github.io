@@ -28,7 +28,7 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
                                       "$$$""          -->
 
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
 <head>
 <meta charset="utf-8">
 <title>Detect print action in Javascript</title>
@@ -42,12 +42,16 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
 <link rel="stylesheet" href="/css/main.css">
 <link rel="alternate" type="application/atom+xml" title="Samim Pezeshki" href="/feed.atom" />
 <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+<script src="/bower_components/angular/angular.min.js" ></script>
+<script src="/bower_components/angular-route/angular-route.js" ></script>
+<script src="/js/posts.js" ></script>
 </head>
-<body>
+<body ng-app="wiki">
 		<h1 class="title">Detect print action in Javascript</h1>
 <section id="main">
-	<div class="post">
-		<p>Sometimes we want to detect when a page is printed to prepare it for the user before print. Things like changing CSS or images. There are two functions available for this, <code>window.onbeforeprint</code> and <code>window.onafterprint</code>.</p>
+	<article  itemscope itemtype="http://schema.org/BlogPosting" class="post article">
+		<div itemprop="articleBody">
+			<p>Sometimes we want to detect when a page is printed to prepare it for the user before print. Things like changing CSS or images. There are two functions available for this, <code>window.onbeforeprint</code> and <code>window.onafterprint</code>.</p>
 
 <p>These two are only available in IE and Firefox. But it can also be done in Chrome using a work around. Chrome can detect when a CSS media query matches. Using this method, the following code can detect the print media query and the print action.</p>
 <div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">acceptTime</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -83,7 +87,22 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
 </code></pre></div>
 <p>The strange thing was that the <code>beforeprint</code> function was triggered two times on every match, therefore the <code>acceptTime</code> variable was added to accept changes every 500ms only once.</p>
 
-	</div>
+		</div>
+
+
+		<ul class="tags">
+			
+    		<li class="tag">
+            javascript
+    		</li>
+			
+    		<li class="tag">
+            print
+    		</li>
+			
+		</ul>
+
+	</article>
 </section>
 
 
@@ -93,10 +112,11 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
         </a>
     </aside>
 
-    <footer class="contact">
-        <ul>
-            <li><a href="mailto:p.samim@gmail.com">p.samim@gmail.com</a></li>
-            <li><a href="https://twitter.com/psamim">@psamim</a></li>
+    <footer class="contact" >
+        <ul itemscope itemtype="http://schema.org/Person">
+        	<li itemprop="name">Samim Pezeshki</li>
+            <li itemprop="email"><a href="mailto:p.samim@gmail.com">p.samim@gmail.com</a></li>
+            <li itemprop="url"><a href="https://twitter.com/psamim">@psamim</a></li>
         </ul>
     </footer>
 

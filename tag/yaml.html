@@ -28,7 +28,7 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
                                       "$$$""          -->
 
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
 <head>
 <meta charset="utf-8">
 <title></title>
@@ -42,8 +42,11 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
 <link rel="stylesheet" href="/css/main.css">
 <link rel="alternate" type="application/atom+xml" title="Samim Pezeshki" href="/feed.atom" />
 <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+<script src="/bower_components/angular/angular.min.js" ></script>
+<script src="/bower_components/angular-route/angular-route.js" ></script>
+<script src="/js/posts.js" ></script>
 </head>
-<body>
+<body ng-app="wiki">
 		<h1>yaml</h1>
 <section id="main">
   	<ul class="posts">
@@ -60,10 +63,11 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
         </a>
     </aside>
 
-    <footer class="contact">
-        <ul>
-            <li><a href="mailto:p.samim@gmail.com">p.samim@gmail.com</a></li>
-            <li><a href="https://twitter.com/psamim">@psamim</a></li>
+    <footer class="contact" >
+        <ul itemscope itemtype="http://schema.org/Person">
+        	<li itemprop="name">Samim Pezeshki</li>
+            <li itemprop="email"><a href="mailto:p.samim@gmail.com">p.samim@gmail.com</a></li>
+            <li itemprop="url"><a href="https://twitter.com/psamim">@psamim</a></li>
         </ul>
     </footer>
 

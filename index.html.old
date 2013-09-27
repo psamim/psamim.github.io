@@ -47,28 +47,21 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
 <script src="/js/posts.js" ></script>
 </head>
 <body ng-app="wiki">
-		<script>
-</script>
-<h1 class="title">Personal Wiki</h1>
-<div ng-view></div>
-<section id="main" ng-controller="PostCtrl">
-	<input id="search" type="text" ng-model="search" />
+		<h1 class="title">Personal Wiki</h1>
+<section id="main">
+	<div class="cats">
+		<a href="/tag/javascript.html" class="set-5">javascript</a> <a href="/tag/jekyll.html" class="set-5">jekyll</a> <a href="/tag/note%20taking.html" class="set-5">note taking</a> <a href="/tag/print.html" class="set-5">print</a> <a href="/tag/story.html" class="set-5">story</a> <a href="/tag/tmux.html" class="set-5">tmux</a> <a href="/tag/vim.html" class="set-5">vim</a> <a href="/tag/yaml.html" class="set-5">yaml</a>
+	</div>
 
-
-<ul class="tags">
-	<li ng-repeat="tag in tags | orderBy:'weight'" class="tag" style="font-size:{{tag.weight}}" ng-click="tagFilter()">
-	<a href="#/tag/{{tag.name}}">{{ tag.name }}</a>
-	</li>
-</ul>
-
-
-<ul class="posts" >
-	<li ng-repeat="post in posts | filter:search">
-	» <a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-</ul>
-
-
+  	<ul class="posts">
+    	
+      	<li><time>24 Sep 2013</time><a href="/2013/09/24/Using-tmux-and-vim.html">Quickly open a tmux pane in Vim</a></li>
+    	
+      	<li><time>24 Sep 2013</time><a href="/2013/09/24/First-Post.html">First Post</a></li>
+    	
+      	<li><time>24 Sep 2013</time><a href="/2013/09/24/Detect-print-action-with-JS.html">Detect print action in Javascript</a></li>
+    	
+  	</ul>
 </div>
 </section>
 
