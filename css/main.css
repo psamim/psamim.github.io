@@ -654,6 +654,10 @@ input#search {
   padding: 0.1em 0.2em 0 0;
   text-transform: uppercase; }
 
+.post.article ul {
+	line-height: 28px;
+}
+
 /**
  * POST: BOOK
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

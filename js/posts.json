@@ -1,6 +1,21 @@
 { "posts" :  [
 {}
 
+	, {"title":"MySQL database migration" ,
+	"url": "/2013/09/24/mysql-migration.html",
+	"tags": [
+		""
+		
+		,	"mysql"
+		
+		,	"database"
+		
+		,	"migration"
+		
+		,	"php"
+		
+		]}
+
 	, {"title":"Quickly open a tmux pane in Vim" ,
 	"url": "/2013/09/24/Using-tmux-and-vim.html",
 	"tags": [
@@ -67,29 +82,37 @@
 "tags" : [
 	{}
 	
-	, {"name":"font","weight":75}
+	, {"name":"tmux","weight":68}
 	
-	, {"name":"icon","weight":75}
+	, {"name":"migration","weight":68}
 	
-	, {"name":"note taking","weight":75}
+	, {"name":"font","weight":68}
 	
-	, {"name":"css","weight":75}
+	, {"name":"print","weight":68}
 	
-	, {"name":"jekyll","weight":75}
+	, {"name":"icon","weight":68}
 	
-	, {"name":"story","weight":75}
+	, {"name":"mysql","weight":68}
 	
-	, {"name":"print","weight":75}
+	, {"name":"yaml","weight":68}
 	
-	, {"name":"javascript","weight":75}
+	, {"name":"design","weight":68}
 	
-	, {"name":"tmux","weight":75}
+	, {"name":"vim","weight":87}
 	
-	, {"name":"design","weight":75}
+	, {"name":"css","weight":68}
 	
-	, {"name":"vim","weight":100}
+	, {"name":"php","weight":68}
 	
-	, {"name":"yaml","weight":75}
+	, {"name":"note taking","weight":68}
+	
+	, {"name":"javascript","weight":68}
+	
+	, {"name":"database","weight":68}
+	
+	, {"name":"jekyll","weight":68}
+	
+	, {"name":"story","weight":68}
 	
 ]
 }

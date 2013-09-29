@@ -6,7 +6,7 @@
  });
 
 function PostCtrl($scope, $routeParams, $http) {
-	$http.get('/js/posts.json?5').success( function(data) {
+	$http.get('/js/posts.json?6').success( function(data) {
 		data.tags.splice(0,1);
 		data.posts.splice(0,1);
 		$scope.tags = data.tags;

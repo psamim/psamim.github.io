@@ -1,0 +1,114 @@
+<!doctype html>
+
+<!--                      oooo$$$$$$$$$$$$oooo
+                      oo$$$$$$$$$$$$$$$$$$$$$$$$o
+                   oo$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o         o$   $$ o$
+   o $ oo        o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o       $$ $$ $$o$
+oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
+"$$$$$$o$     o$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$o    $$$$$$$$
+  $$$$$$$    $$$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$
+  $$$$$$$$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$$$$$$  """$$$
+   "$$$""""$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     "$$$
+    $$$   o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     "$$$o
+   o$$"   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$       $$$o
+   $$$    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" "$$$$$$ooooo$$$$o
+  o$$$oooo$$$$$  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   o$$$$$$$$$$$$$$$$$
+  $$$$$$$$"$$$$   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     $$$$""""""""
+ """"       $$$$    "$$$$$$$$$$$$$$$$$$$$$$$$$$$$"      o$$$
+            "$$$o     """$$$$$$$$$$$$$$$$$$"$$"         $$$
+              $$$o          "$$""$$$$$$""""           o$$$
+               $$$$o                                o$$$"
+                "$$$$o      o$$$$$$o"$$$$o        o$$$$
+                  "$$$$$oo     ""$$$$o$$$$$o   o$$$$""
+                     ""$$$$$oooo  "$$$o$$$$$$$$$"""
+                        ""$$$$$$$oo $$$$$$$$$$
+                                """"$$$$$$$$$$$
+                                    $$$$$$$$$$$$
+                                     $$$$$$$$$$"
+                                      "$$$""          -->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
+<head>
+<meta charset="utf-8">
+<title>MySQL database migration</title>
+<meta name="description" content="Personal website of Samim Pezeshki, mostly a personal wiki about PHP and Linux.">
+<meta name="author" content="Samim Pezeshki">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- syntax highlighting CSS -->
+<link rel="stylesheet" href="/css/syntax.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/main.css">
+<link rel="alternate" type="application/atom+xml" title="Samim Pezeshki" href="/feed.atom" />
+<link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
+<script src="/bower_components/angular/angular.min.js" ></script>
+<script src="/bower_components/angular-route/angular-route.js" ></script>
+<script src="/js/app.js" ></script>
+</head>
+<body ng-app="wiki">
+		<h1 class="title">MySQL database migration</h1>
+<section id="main">
+	<article  itemscope itemtype="http://schema.org/BlogPosting" class="post article">
+		<div itemprop="articleBody">
+			<p>Versioning the database and using migrations is a good practice. while PHP frameworks ussually provide some methods for this, here I list some methods to have database versioning and migrations without frameworks.</p>
+
+<ul>
+<li><p><a href="http://joefreeman.co.uk/blog/2009/07/php-script-to-compare-mysql-database-schemas/">This</a> is a small PHP script to compare two MySQL database schemas. It shows the diffs visually, not very useful for actual use. It compares two databases.</p></li>
+<li><p><a href="https://github.com/idler/MMP/wiki/Description">MMP</a> is a complete PHP CLI tool which compares schemas and produces migrations based on diffs. It compares the database with its previous state and does the versiosning, too. Migrations are in plain SQL wrapped in PHP. Also it does the migrations itself. It has some minor bugs but can be a nice base for creating such tools. Creating migrations can be buggy. Needs direct access to database.</p></li>
+<li><p><a href="http://adamspiers.org/computing/mysqldiff/">mysqldiff</a> is a Perl script which compares two databases or two SQL files and produces the MySQL  migration commands based on diffs.</p></li>
+<li><p><a href="http://phinx.org/">Phinx</a> is a PHP migration tool and does not compare databases. Migrations can be in written in SQL or using the Phinx specific ORM in PHP.</p></li>
+<li><p><a href="http://www.liquibase.org/">Liquibase</a> is a java library and tool for tracking and applying database changes. It can be used from command line or even Ant or Maven. Changelogs are in JSON, YAML, SQL or XML. It does compare the database, creates the migrations and does the migrations itself.</p></li>
+<li><p><a href="http://www.doctrine-project.org/projects/migrations.html">Doctrine</a> ORM has a migration feature. It may be useful if Doctrine or Symfony framework is used.</p></li>
+<li><p><a href="http://stackoverflow.com/questions/225772/compare-two-mysql-databases">This post</a> may be helpful for finding diff tools.</p>
+
+<p>Although the ability to compare the databases and producing the migrations automatically seems appealing <a href="http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html">this article</a> explains why it is not a good pratice.</p></li>
+</ul>
+
+		</div>
+
+
+		<ul class="tags">
+			
+    		<li class="tag">
+            mysql
+    		</li>
+			
+    		<li class="tag">
+            database
+    		</li>
+			
+    		<li class="tag">
+            migration
+    		</li>
+			
+    		<li class="tag">
+            php
+    		</li>
+			
+		</ul>
+
+	</article>
+</section>
+
+
+    <aside class="logo">
+        <a href="/">
+            T <span class="logo-title">(homepage)</span>
+        </a>
+    </aside>
+
+    <footer class="contact" >
+        <ul itemscope itemtype="http://schema.org/Person">
+        	<li itemprop="name">Samim Pezeshki</li>
+            <li itemprop="email"><a href="mailto:p.samim@gmail.com">p.samim@gmail.com</a></li>
+            <li itemprop="url"><a href="https://twitter.com/psamim">@psamim</a></li>
+        </ul>
+    </footer>
+
+    <footer class="license">
+        <p>All content is, unless otherwise stated, published under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+    </footer>
+
+</body>
+</html>
