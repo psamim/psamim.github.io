@@ -1,0 +1,95 @@
+{ "posts" :  [
+{}
+
+	, {"title":"Quickly open a tmux pane in Vim" ,
+	"url": "/2013/09/24/Using-tmux-and-vim.html",
+	"tags": [
+		""
+		
+		,	"vim"
+		
+		,	"tmux"
+		
+		]}
+
+	, {"title":"Some icon fonts" ,
+	"url": "/2013/09/24/Some-icon-fonts.html",
+	"tags": [
+		""
+		
+		,	"icon"
+		
+		,	"font"
+		
+		,	"css"
+		
+		,	"design"
+		
+		]}
+
+	, {"title":"First Post" ,
+	"url": "/2013/09/24/First-Post.html",
+	"tags": [
+		""
+		
+		,	"story"
+		
+		,	"jekyll"
+		
+		,	"yaml"
+		
+		,	"note taking"
+		
+		]}
+
+	, {"title":"Detect print action in Javascript" ,
+	"url": "/2013/09/24/Detect-print-action-with-JS.html",
+	"tags": [
+		""
+		
+		,	"javascript"
+		
+		,	"print"
+		
+		]}
+
+	, {"title":"Paste from register in insert mode" ,
+	"url": "/2013/09/24/CTRL-R-in-Vim.html",
+	"tags": [
+		""
+		
+		,	"vim"
+		
+		]}
+
+] ,
+
+"tags" : [
+	{}
+	
+	, {"name":"story","weight":75}
+	
+	, {"name":"tmux","weight":75}
+	
+	, {"name":"vim","weight":100}
+	
+	, {"name":"css","weight":75}
+	
+	, {"name":"jekyll","weight":75}
+	
+	, {"name":"print","weight":75}
+	
+	, {"name":"javascript","weight":75}
+	
+	, {"name":"design","weight":75}
+	
+	, {"name":"font","weight":75}
+	
+	, {"name":"icon","weight":75}
+	
+	, {"name":"note taking","weight":75}
+	
+	, {"name":"yaml","weight":75}
+	
+]
+}
