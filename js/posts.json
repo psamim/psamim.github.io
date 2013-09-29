@@ -67,27 +67,27 @@
 "tags" : [
 	{}
 	
-	, {"name":"story","weight":75}
-	
-	, {"name":"tmux","weight":75}
-	
-	, {"name":"vim","weight":100}
-	
-	, {"name":"css","weight":75}
-	
-	, {"name":"jekyll","weight":75}
-	
-	, {"name":"print","weight":75}
-	
-	, {"name":"javascript","weight":75}
-	
-	, {"name":"design","weight":75}
-	
 	, {"name":"font","weight":75}
 	
 	, {"name":"icon","weight":75}
 	
 	, {"name":"note taking","weight":75}
+	
+	, {"name":"css","weight":75}
+	
+	, {"name":"jekyll","weight":75}
+	
+	, {"name":"story","weight":75}
+	
+	, {"name":"print","weight":75}
+	
+	, {"name":"javascript","weight":75}
+	
+	, {"name":"tmux","weight":75}
+	
+	, {"name":"design","weight":75}
+	
+	, {"name":"vim","weight":100}
 	
 	, {"name":"yaml","weight":75}
 	
