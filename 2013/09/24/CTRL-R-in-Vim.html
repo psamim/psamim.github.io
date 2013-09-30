@@ -31,7 +31,7 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
 <head>
 <meta charset="utf-8">
-<title>Personal Wiki</title>
+<title>Paste from register in insert mode</title>
 <meta name="description" content="Personal website of Samim Pezeshki, mostly a personal wiki about PHP and Linux.">
 <meta name="author" content="Samim Pezeshki">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,27 +44,42 @@ oo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$
 <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"/>
 <script src="/bower_components/angular/angular.min.js" ></script>
 <script src="/bower_components/angular-route/angular-route.js" ></script>
-<script src="/js/posts.js" ></script>
+<script src="/js/app.js" ></script>
 </head>
 <body ng-app="wiki">
-		<h1 class="title">Personal Wiki</h1>
+		<h1 class="title">Paste from register in insert mode</h1>
 <section id="main">
-	<div class="cats">
-		<a href="/tag/javascript.html" class="set-5">javascript</a> <a href="/tag/jekyll.html" class="set-5">jekyll</a> <a href="/tag/note%20taking.html" class="set-5">note taking</a> <a href="/tag/print.html" class="set-5">print</a> <a href="/tag/story.html" class="set-5">story</a> <a href="/tag/tmux.html" class="set-5">tmux</a> <a href="/tag/vim.html" class="set-5">vim</a> <a href="/tag/yaml.html" class="set-5">yaml</a>
-	</div>
+	<article  itemscope itemtype="http://schema.org/BlogPosting" class="post article">
+		<div itemprop="articleBody">
+			<p>CTRL-R is used to paste something while in insert mode, from any register.</p>
 
-  	<ul class="posts">
-    	
-      	<li><time>24 Sep 2013</time><a href="/2013/09/24/Using-tmux-and-vim.html">Quickly open a tmux pane in Vim</a></li>
-    	
-      	<li><time>24 Sep 2013</time><a href="/2013/09/24/First-Post.html">First Post</a></li>
-    	
-      	<li><time>24 Sep 2013</time><a href="/2013/09/24/Detect-print-action-with-JS.html">Detect print action in Javascript</a></li>
-    	
-  	</ul>
-</div>
+<ul>
+<li><code>CTRL-R %</code>        Current file name</li>
+<li><code>CTRL-R *</code>        Clipboard</li>
+<li><code>CTRL-R +</code>        Clipboard</li>
+<li><code>CTRL-R /</code>        Last search pattern</li>
+<li><code>CTRL-R :</code>        Last command</li>
+</ul>
+
+<p>The most interesting is that it can evaluate a mathematical expression.</p>
+
+<ul>
+<li><code>CTRL-R =</code>        Evaluate</li>
+</ul>
+
+		</div>
+
+
+		<ul class="tags">
+			
+    		<li class="tag">
+            vim
+    		</li>
+			
+		</ul>
+
+	</article>
 </section>
-
 
 
     <aside class="logo">

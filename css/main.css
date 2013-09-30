@@ -554,11 +554,15 @@ a:focus {
   box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; }
 
 input#search {
-  width: 100%;
-  font-size: 30px;
-  margin: 0.5em 0;
-  background: none;
-  border: 1px solid #888888;
+  	width: 100%;
+  	font-size: 30px;
+  	margin: 0.5em 0;
+  	background: #5E5E5E;
+  	border: 0px solid #000000;
+  	box-shadow: 0 0 8px rgba(0, 0, 0, 1) inset;
+  	border-radius: 17px;
+  	color: #CCCCCC;
+  	padding: 12px;
 }
 /**
  * NOTICE
@@ -649,6 +653,10 @@ input#search {
   line-height: 0.65em;
   padding: 0.1em 0.2em 0 0;
   text-transform: uppercase; }
+
+.post.article ul {
+	line-height: 28px;
+}
 
 /**
  * POST: BOOK
