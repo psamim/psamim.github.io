@@ -1,7 +1,10 @@
 wikiApp = angular.module('wiki',['ngRoute']);
 
 var homeTemplate =
-	'<input id="search" type="search" ng-model="search" />' +
+	'<span class="search"><input id="search" type="search" placeholder="Search" ng-model="search" />' +
+	'<span ng-show="clearButton()" ng-click="clearSearch()"><i class="icon-cancel"></i></span>' +
+	'<span ng-show="!clearButton()" ng-click="clearSearch()"><i class="icon-search"></i></span>' +
+	'</span>' +
 	'<ul class="tags">' +
 	'<li ng-repeat="tag in tags | orderBy:\'weight\':true" class="tag" style="font-size:{{tag.weight}}%" >' +
 	'<a ng-href="#/tag/{{tag.name}}" ng-click="tagFilter()">{{ tag.name }}</a>' +
@@ -33,5 +36,13 @@ function PostCtrl($scope, $routeParams, $http) {
 	console.log($routeParams);
 	$scope.tagFilter = function() {
 		$scope.search = $routeParams.name;
+	};
+
+	$scope.clearButton = function () {
+		return !( $scope.search == null || $scope.search == '');
+	};
+
+	$scope.clearSearch = function() {
+		$scope.search = '';
 	};
 }

@@ -75,6 +75,10 @@ body {
     margin: 0;
 }
 
+body, html {
+	height:100%;
+}
+
 /* ==========================================================================
    Links
    ========================================================================== */
@@ -467,8 +471,11 @@ a:focus {
  * LAYOUT
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 #main {
-  margin: 0 auto;
+  margin: 0 auto -4em;
   max-width: 600px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
   padding: 0 25px 70px; }
 
 @charset "UTF-8";
@@ -523,6 +530,10 @@ li.here {
 
 li.me {
 	background-color: #2980b9;
+}
+
+.footer, .push {
+	height: 4em;
 }
 /**
  * POSTS LIST
@@ -594,6 +605,17 @@ input#search {
   	border-radius: 7px;
   	color: #CCCCCC;
   	padding: 12px;
+}
+
+span.search {
+	position: relative;
+}
+
+.search span {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	color: #CECECE;
 }
 /**
  * NOTICE

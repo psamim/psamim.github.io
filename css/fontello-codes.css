@@ -1,4 +1,6 @@
 
+.icon-search:before { content: '\e804'; } /* '' */
 .icon-user:before { content: '\e800'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
 .icon-home:before { content: '\e801'; } /* '' */
 .icon-book:before { content: '\e802'; } /* '' */
