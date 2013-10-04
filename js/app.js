@@ -10,7 +10,7 @@ var homeTemplate =
 	'<a ng-href="#/tag/{{tag.name}}" ng-click="tagFilter()">{{ tag.name }}</a>' +
 	'</ili>' +
 	'</ul>' +
-	'<ul class="posts" > <li class="reveal-animation" ng-repeat="post in posts | filter:search"> » <a href="{{ post.url }}">{{ post.title }}</a> </li> </ul>';
+	'<ul class="posts" > <li class="repeat-item" ng-repeat="post in posts | filter:search"> » <a href="{{ post.url }}">{{ post.title }}</a> </li> </ul>';
 
 
  wikiApp.value('$anchorScroll', angular.noop);
