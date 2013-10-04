@@ -1,4 +1,4 @@
-wikiApp = angular.module('wiki',['ngRoute']);
+wikiApp = angular.module('wiki',['ngRoute','ngAnimate']);
 
 var homeTemplate =
 	'<span class="search"><input id="search" type="search" placeholder="Search" ng-model="search" />' +
@@ -6,11 +6,11 @@ var homeTemplate =
 	'<span ng-show="!clearButton()" ng-click="clearSearch()"><i class="icon-search"></i></span>' +
 	'</span>' +
 	'<ul class="tags">' +
-	'<li ng-repeat="tag in tags | orderBy:\'weight\':true" class="tag" style="font-size:{{tag.weight}}%" >' +
+	'<li  ng-repeat="tag in tags | orderBy:\'weight\':true" class="tag" style="font-size:{{tag.weight}}%" >' +
 	'<a ng-href="#/tag/{{tag.name}}" ng-click="tagFilter()">{{ tag.name }}</a>' +
 	'</ili>' +
 	'</ul>' +
-	'<ul class="posts" > <li ng-repeat="post in posts | filter:search"> » <a href="{{ post.url }}">{{ post.title }}</a> </li> </ul>';
+	'<ul class="posts" > <li class="reveal-animation" ng-repeat="post in posts | filter:search"> » <a href="{{ post.url }}">{{ post.title }}</a> </li> </ul>';
 
 
  wikiApp.value('$anchorScroll', angular.noop);
