@@ -1,4 +1,4 @@
-wikiApp = angular.module('wiki',['ngRoute','ngAnimate']);
+wikiApp = angular.module('wiki',['ngRoute','ngAnimate','ngSanitize']);
 
 var homeTemplate =
 	'<span class="search"><input id="search" type="search" placeholder="Search" ng-model="search" />' +
@@ -10,19 +10,19 @@ var homeTemplate =
 	'<a ng-href="#/tag/{{tag.name}}" ng-click="tagFilter()">{{ tag.name }}</a>' +
 	'</ili>' +
 	'</ul>' +
-	'<ul class="posts" > <li class="repeat-item" ng-repeat="post in posts | filter:search"> » <a href="{{ post.url }}">{{ post.title }}</a> </li> </ul>';
+	'<ul class="posts" > <li class="repeat-item" ng-repeat="post in posts | filter:search"> » ' +
+	'<a href="/#/post{{ post.url }}">{{ post.title }}</a> </li> </ul>';
+
+var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
 
 
-var postTemplate = function() {
-	return 'hello';
-};
 
- wikiApp.value('$anchorScroll', angular.noop);
+ /*wikiApp.value('$anchorScroll', angular.noop);*/
  wikiApp.config( function($routeProvider) {
 	$routeProvider.when('/tag/:name', {
 		controller: HomeCtrl,
 		template: homeTemplate
-     }).when('/post/:name', {
+     }).when('/post/:url*', {
      	 controller: PostCtrl,
      	template: postTemplate
      }).otherwise( {
@@ -54,6 +54,12 @@ function HomeCtrl($scope, $routeParams, $http) {
 	};
 }
 
-function PostCtrl($scope, $routeParams, $http) {
+function PostCtrl($scope, $routeParams, $http, $sce) {
+	$scope.url = $routeParams.url;
+	$scope.content = '';
+	$http.get( '/' +  $scope.url , {cache:true}).success( function(data) {
+		$scope.content = $sce.trustAsHtml(data);
+	});
+	console.log($scope.content);
 
 };
