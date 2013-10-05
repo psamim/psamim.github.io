@@ -13,18 +13,25 @@ var homeTemplate =
 	'<ul class="posts" > <li class="repeat-item" ng-repeat="post in posts | filter:search"> » <a href="{{ post.url }}">{{ post.title }}</a> </li> </ul>';
 
 
+var postTemplate = function() {
+	return 'hello';
+};
+
  wikiApp.value('$anchorScroll', angular.noop);
  wikiApp.config( function($routeProvider) {
 	$routeProvider.when('/tag/:name', {
-		controller: PostCtrl,
+		controller: HomeCtrl,
 		template: homeTemplate
-     }).when('/', {
-		controller: PostCtrl,
+     }).when('/post/:name', {
+     	 controller: PostCtrl,
+     	template: postTemplate
+     }).otherwise( {
+		controller: HomeCtrl,
 		template: homeTemplate
      });
  });
 
-function PostCtrl($scope, $routeParams, $http) {
+function HomeCtrl($scope, $routeParams, $http) {
 	$http.get('/js/posts.json?6', {cache:true}).success( function(data) {
 		data.tags.splice(0,1);
 		data.posts.splice(0,1);
@@ -46,3 +53,7 @@ function PostCtrl($scope, $routeParams, $http) {
 		$scope.search = '';
 	};
 }
+
+function PostCtrl($scope, $routeParams, $http) {
+
+};
