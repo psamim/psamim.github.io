@@ -15,6 +15,8 @@ var homeTemplate =
 
 var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
 
+var waitTemplate = '<div class="loading"><div id="movingBallG"><div class="movingBallLineG"></div>' +
+					'<div id="movingBallG_1" class="movingBallG"></div></div></div>';
 
 
  /*wikiApp.value('$anchorScroll', angular.noop);*/
@@ -56,10 +58,10 @@ function HomeCtrl($scope, $routeParams, $http) {
 
 function PostCtrl($scope, $routeParams, $http, $sce) {
 	$scope.url = $routeParams.url;
-	$scope.content = '';
+	$scope.content = waitTemplate;
 	$http.get( '/' +  $scope.url , {cache:true}).success( function(data) {
 		$scope.content = $sce.trustAsHtml(data);
 	});
 	console.log($scope.content);
 
-};
+}
