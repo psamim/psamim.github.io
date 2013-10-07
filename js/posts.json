@@ -2,7 +2,7 @@
 {}
 
 	, {"title":"MySQL database migration" ,
-	"url": "/2013/09/24/mysql-migration.html",
+	"url": "/2013/09/24/mysql-migration",
 	"tags": [
 		""
 		
@@ -17,7 +17,7 @@
 		]}
 
 	, {"title":"Quickly open a tmux pane in Vim" ,
-	"url": "/2013/09/24/Using-tmux-and-vim.html",
+	"url": "/2013/09/24/Using-tmux-and-vim",
 	"tags": [
 		""
 		
@@ -28,7 +28,7 @@
 		]}
 
 	, {"title":"Some icon fonts" ,
-	"url": "/2013/09/24/Some-icon-fonts.html",
+	"url": "/2013/09/24/Some-icon-fonts",
 	"tags": [
 		""
 		
@@ -43,7 +43,7 @@
 		]}
 
 	, {"title":"First Post" ,
-	"url": "/2013/09/24/First-Post.html",
+	"url": "/2013/09/24/First-Post",
 	"tags": [
 		""
 		
@@ -58,7 +58,7 @@
 		]}
 
 	, {"title":"Detect print action in Javascript" ,
-	"url": "/2013/09/24/Detect-print-action-with-JS.html",
+	"url": "/2013/09/24/Detect-print-action-with-JS",
 	"tags": [
 		""
 		
@@ -69,7 +69,7 @@
 		]}
 
 	, {"title":"Paste from register in insert mode" ,
-	"url": "/2013/09/24/CTRL-R-in-Vim.html",
+	"url": "/2013/09/24/CTRL-R-in-Vim",
 	"tags": [
 		""
 		

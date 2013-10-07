@@ -1,12 +1,16 @@
 wikiApp = angular.module('wiki',['ngRoute','ngAnimate','ngSanitize']);
 
+var waitTemplate = '<div ng-show="wait" class="loading"><div id="movingBallG"><div class="movingBallLineG"></div>' +
+					'<div id="movingBallG_1" class="movingBallG"></div></div></div>';
+
 var homeTemplate =
 	'<span class="search"><input id="search" type="search" placeholder="Search" ng-model="search" />' +
 	'<span ng-show="clearButton()" ng-click="clearSearch()"><i class="icon-cancel"></i></span>' +
 	'<span ng-show="!clearButton()" ng-click="clearSearch()"><i class="icon-search"></i></span>' +
 	'</span>' +
+	waitTemplate +
 	'<ul class="tags">' +
-	'<li  ng-repeat="tag in tags | orderBy:\'weight\':true" class="tag" style="font-size:{{tag.weight}}%" >' +
+	'<li ng-repeat="tag in tags | orderBy:\'weight\':true" class="tag" style="font-size:{{tag.weight}}%" >' +
 	'<a ng-href="#/tag/{{tag.name}}" ng-click="tagFilter()">{{ tag.name }}</a>' +
 	'</ili>' +
 	'</ul>' +
@@ -15,8 +19,6 @@ var homeTemplate =
 
 var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
 
-var waitTemplate = '<div class="loading"><div id="movingBallG"><div class="movingBallLineG"></div>' +
-					'<div id="movingBallG_1" class="movingBallG"></div></div></div>';
 
 
  /*wikiApp.value('$anchorScroll', angular.noop);*/
@@ -34,11 +36,13 @@ var waitTemplate = '<div class="loading"><div id="movingBallG"><div class="movin
  });
 
 function HomeCtrl($scope, $routeParams, $http) {
+	$scope.wait = 'sa';
 	$http.get('/js/posts.json?6', {cache:true}).success( function(data) {
 		data.tags.splice(0,1);
 		data.posts.splice(0,1);
 		$scope.tags = data.tags;
 		$scope.posts = data.posts;
+		$scope.wait = false;
 	});
 
 	$scope.search = $routeParams.name;
@@ -59,7 +63,7 @@ function HomeCtrl($scope, $routeParams, $http) {
 function PostCtrl($scope, $routeParams, $http, $sce) {
 	$scope.url = $routeParams.url;
 	$scope.content = waitTemplate;
-	$http.get( '/' +  $scope.url , {cache:true}).success( function(data) {
+	$http.get( '/' +  $scope.url + '.html', {cache:true}).success( function(data) {
 		$scope.content = $sce.trustAsHtml(data);
 	});
 	console.log($scope.content);
