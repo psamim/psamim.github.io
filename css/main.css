@@ -96,17 +96,17 @@ a:focus {
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 .menu {
   font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-  left: 15px;
+  left: 0;
   position: fixed;
-  top: 15px; }
+  top: 35px; }
 
 .menu li {
 	list-style-type: none;
 	display: block;
 	background-color: red;
 	padding: 7px 10px;
-	margin: 5px;
-	border-radius: 3px;
+	margin: 5px 0;
+	border-radius: 0 5px 5px 0;
 }
 
 .menu i {
