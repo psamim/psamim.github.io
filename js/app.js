@@ -1,5 +1,5 @@
-wikiApp = angular.module('wiki',['ngRoute','ngAnimate','ngSanitize']);
-
+var wikiApp = angular.module('wiki',['ngRoute','ngAnimate','ngSanitize']);
+//
 var waitTemplate = '<div ng-show="wait" class="loading"><div id="movingBallG"><div class="movingBallLineG"></div>' +
 					'<div id="movingBallG_1" class="movingBallG"></div></div></div>';
 
@@ -19,7 +19,9 @@ var homeTemplate =
 
 var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
 
+var notFoundTemplate = '<div class="not-found">404</div>';
 
+//
 
  /*wikiApp.value('$anchorScroll', angular.noop);*/
  wikiApp.config( function($routeProvider) {
@@ -27,8 +29,8 @@ var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
 		controller: HomeCtrl,
 		template: homeTemplate
      }).when('/post/:url*', {
-     	 controller: PostCtrl,
-     	template: postTemplate
+		controller: PostCtrl,
+		template: postTemplate
      }).otherwise( {
 		controller: HomeCtrl,
 		template: homeTemplate
@@ -36,8 +38,7 @@ var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
  });
 
 function HomeCtrl($scope, $routeParams, $http) {
-	$scope.wait = 'sa';
-	$http.get('/js/posts.json?6', {cache:true}).success( function(data) {
+	$http.get('/js/posts.json?7', {cache:true}).success( function(data) {
 		data.tags.splice(0,1);
 		data.posts.splice(0,1);
 		$scope.tags = data.tags;
@@ -46,7 +47,6 @@ function HomeCtrl($scope, $routeParams, $http) {
 	});
 
 	$scope.search = $routeParams.name;
-	console.log($routeParams);
 	$scope.tagFilter = function() {
 		$scope.search = $routeParams.name;
 	};
@@ -65,7 +65,8 @@ function PostCtrl($scope, $routeParams, $http, $sce) {
 	$scope.content = waitTemplate;
 	$http.get( '/' +  $scope.url + '.html', {cache:true}).success( function(data) {
 		$scope.content = $sce.trustAsHtml(data);
+	}).error(function() {
+		console.log("jo");
+		$scope.content = notFoundTemplate;
 	});
-	console.log($scope.content);
-
 }

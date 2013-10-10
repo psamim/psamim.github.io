@@ -84,11 +84,18 @@ a:focus {
  * LAYOUT
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 #main {
-  margin: 0 auto;
-  max-width: 600px;
-  min-height: 500px;
-  position:relative;
-  padding: 0 25px 70px; }
+  	margin: 0 auto;
+  	max-width: 600px;
+  	min-height: 500px;
+  	position:relative;
+	padding: 0 25px 70px;
+}
+
+.not-found {
+	text-align: center;
+	font-size: 40px;
+	color: #BBB;
+}
 
 @charset "UTF-8";
 /**

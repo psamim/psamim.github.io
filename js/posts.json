@@ -16,6 +16,13 @@
 		
 		]}
 
+	, {"title":"About Me" ,
+	"url": "/2013/09/24/about-me",
+	"tags": [
+		""
+		
+		]}
+
 	, {"title":"Quickly open a tmux pane in Vim" ,
 	"url": "/2013/09/24/Using-tmux-and-vim",
 	"tags": [
