@@ -86,7 +86,7 @@ a:focus {
 #main {
   margin: 0 auto;
   max-width: 600px;
-  min-height: 400px;
+  min-height: 500px;
   position:relative;
   padding: 0 25px 70px; }
 
@@ -107,6 +107,18 @@ a:focus {
 	padding: 7px 10px;
 	margin: 5px 0;
 	border-radius: 0 5px 5px 0;
+    -webkit-transition-duration: 0.25s;
+    -webkit-transform-origin: 0% 50%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotate3d(0,1,0,0deg);
+    -moz-transition-duration: 0.25s;
+    -moz-transform-origin: 0% 50%;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotate3d(0,1,0,0deg);
+    transition-duration: 0.25s;
+    transform-origin: 0% 50%;
+    transform-style: preserve-3d;
+    transform: rotate3d(0,1,0,0deg);
 }
 
 .menu i {
@@ -116,10 +128,23 @@ a:focus {
 .menu ul {
 	margin: 0;
 	padding: 0;
+	-webkit-perspective: 800;
+	-moz-perspective: 800;
+	perspective: 800;
 }
 
 .menu li:hover {
 	background-color:#7f8c8d;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transform: rotate3d(0,1,0,30deg);
+	-moz-transform: rotate3d(0,1,0,30deg);
+	-o-transform: rotate3d(0,1,0,30deg);
+	-ms-transform: rotate3d(0,1,0,30deg);
+	transform: rotate3d(0,1,0,30deg);
 }
 
 .menu a {
