@@ -107,6 +107,8 @@ a:focus {
 	padding: 7px 10px;
 	margin: 5px 0;
 	border-radius: 0 5px 5px 0;
+	height: 35px;
+	line-height: 35px;
     -webkit-transition-duration: 0.25s;
     -webkit-transform-origin: 0% 50%;
     -webkit-transform-style: preserve-3d;
