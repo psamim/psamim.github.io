@@ -4,7 +4,8 @@ var waitTemplate = '<div ng-show="wait" class="loading"><div id="movingBallG"><d
 					'<div id="movingBallG_1" class="movingBallG"></div></div></div>';
 
 var homeTemplate =
-	'<span class="search"><input id="search" type="search" placeholder="Search" ng-model="search" />' +
+	'<h1 class="title"><a href="/#/">Personal Wiki</a></h1>' +
+	'<section id="main"><span class="search"><input id="search" type="search" placeholder="Search" ng-model="search" />' +
 	'<span ng-show="clearButton()" ng-click="clearSearch()"><i class="icon-cancel"></i></span>' +
 	'<span ng-show="!clearButton()" ng-click="clearSearch()"><i class="icon-search"></i></span>' +
 	'</span>' +
@@ -15,11 +16,11 @@ var homeTemplate =
 	'</ili>' +
 	'</ul>' +
 	'<ul class="posts" > <li class="repeat-item" ng-repeat="post in posts | filter:search"> » ' +
-	'<a href="/#/post{{ post.url }}">{{ post.title }}</a> </li> </ul>';
+	'<a href="/#/post{{ post.url }}">{{ post.title }}</a> </li> </ul></sectioni>';
 
-var postTemplate = '<div class="view" ng-animate ng-bind-html="content"></div>';
+var postTemplate = '<section id="main" ><div class="view" ng-animate ng-bind-html="content"></div></section>';
 
-var notFoundTemplate = '<div class="not-found">404</div>';
+var notFoundTemplate = '<section id="main"><div class="not-found">404</div></section>';
 
 //
 
