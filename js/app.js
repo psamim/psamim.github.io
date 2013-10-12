@@ -44,7 +44,7 @@ function HomeCtrl($scope, $routeParams, $http) {
 		data.posts.splice(0,1);
 		$scope.tags = data.tags;
 		$scope.posts = data.posts;
-		$scope.wait = false;
+		//$scope.wait = false;
 	});
 
 	$scope.search = $routeParams.name;
@@ -67,7 +67,6 @@ function PostCtrl($scope, $routeParams, $http, $sce) {
 	$http.get( '/' +  $scope.url + '.html', {cache:true}).success( function(data) {
 		$scope.content = $sce.trustAsHtml(data);
 	}).error(function() {
-		console.log("jo");
 		$scope.content = notFoundTemplate;
 	});
 }
