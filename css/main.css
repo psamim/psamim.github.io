@@ -9,12 +9,11 @@ html {
 body {
   background: #F0F0F0;
   color: #000;
-  font-family: Times, serif;
+  font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
   margin: 0;
   padding: 0; }
 
 h1 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size: 3.25em;
   font-weight: normal;
   margin: 1em 0;
@@ -70,15 +69,6 @@ a:focus {
   background: #ff6;
   color: #000; }
 
-@media screen and (max-width: 750px) {
-  /* This is used in JavaScript. */
-  body:after {
-    content: 'small';
-    display: none; }
-
-  h1 {
-    font-size: 35px;
-    font-weight: bold; } }
 
 /**
  * LAYOUT
@@ -102,7 +92,6 @@ a:focus {
  * "MENU"
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 .menu {
-  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
   left: 0;
   position: fixed;
   top: 35px; }
@@ -197,47 +186,6 @@ li.me {
 /**
  * INDEX
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.twitter-follow {
-  text-align: center; }
-
-.button {
-  background-color: #eeeeee;
-  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: linear-gradient(top, #eeeeee, #cccccc);
-  border: 1px solid #ccc;
-  border-bottom: 1px solid #bbb;
-  border-radius: 3px;
-  color: #333;
-  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  padding: 7px 9px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: -1px -1 0 #EEE;
-  width: 150px; }
-
-.button:hover {
-  background-color: #dddddd;
-  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
-  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: linear-gradient(top, #dddddd, #bbbbbb);
-  border: 1px solid #bbb;
-  border-bottom: 1px solid #999;
-  cursor: pointer;
-  text-shadow: 0 1px 0 #ddd; }
-
-.button:active {
-  border: 1px solid #aaa;
-  border-bottom: 1px solid #888;
-  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; }
-
 input#search {
   	width: 100%;
   	font-size: 30px;
@@ -336,6 +284,9 @@ span.search {
 /**
  * POST: ARTICLE
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.post.article {
+	font-size: 0.9em;
+}
 .post.article > div > p:first-child::first-line {
   font-size: 1.3em;
   font-variant: small-caps;
@@ -398,11 +349,12 @@ span.search {
 .tags {
   list-style: none;
   padding: 0;
-  text-align: justify; }
+  margin: 0 -25px 0 0;
+  text-align: center; }
 
 .tags li, .cats a {
   display: inline-block;
-  margin: 0 25px 25px 0; }
+  margin: 0 20px 10px 0; }
 
 .tags li:last-child, .cats a:last-child {
   margin-right: 0; }
@@ -492,4 +444,30 @@ span.search {
   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
+}
+
+
+@media screen and (max-width: 900px) {
+  /* This is used in JavaScript. */
+  body:after {
+    content: 'small';
+    display: none; }
+
+  h1 {
+    font-size: 35px;
+    font-weight: bold; }
+
+  .menu {
+  	  position: relative;
+  	  top:0;
+  }
+  .menu li:hover {
+	  background-color:#7f8c8d;
+	  transition-duration: 0.3s;
+	  -webkit-transform: none;
+	  -moz-transform: none;
+	  -o-transform: none;
+	  -ms-transform: none;
+	  transform: none;
+  }
 }

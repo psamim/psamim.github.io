@@ -89,35 +89,35 @@
 "tags" : [
 	{}
 	
-	, {"name":"migration","weight":68}
-	
-	, {"name":"yaml","weight":68}
+	, {"name":"vim","weight":87}
 	
 	, {"name":"javascript","weight":68}
 	
-	, {"name":"css","weight":68}
-	
-	, {"name":"mysql","weight":68}
-	
-	, {"name":"tmux","weight":68}
-	
-	, {"name":"font","weight":68}
-	
 	, {"name":"print","weight":68}
-	
-	, {"name":"database","weight":68}
-	
-	, {"name":"icon","weight":68}
-	
-	, {"name":"note taking","weight":68}
-	
-	, {"name":"jekyll","weight":68}
 	
 	, {"name":"story","weight":68}
 	
-	, {"name":"vim","weight":87}
+	, {"name":"jekyll","weight":68}
+	
+	, {"name":"yaml","weight":68}
+	
+	, {"name":"note taking","weight":68}
+	
+	, {"name":"icon","weight":68}
+	
+	, {"name":"font","weight":68}
+	
+	, {"name":"css","weight":68}
 	
 	, {"name":"design","weight":68}
+	
+	, {"name":"tmux","weight":68}
+	
+	, {"name":"mysql","weight":68}
+	
+	, {"name":"database","weight":68}
+	
+	, {"name":"migration","weight":68}
 	
 	, {"name":"php","weight":68}
 	
