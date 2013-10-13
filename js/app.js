@@ -1,3 +1,6 @@
+var disqus_shortname = 'psamim';
+//var disqus_url = 'http://vvv.tobiassjosten.net/events/announcing-november-camp-2013/';
+//var disqus_developer = true ? 1 : 0;
 var wikiApp = angular.module('wiki',['ngRoute','ngAnimate','ngSanitize']);
 //
 var waitTemplate = '<div ng-show="wait" class="loading"><div id="movingBallG"><div class="movingBallLineG"></div>' +
@@ -18,7 +21,7 @@ var homeTemplate =
 	'<ul class="posts" > <li class="repeat-item" ng-repeat="post in posts | filter:search"> » ' +
 	'<a href="/#/post{{ post.url }}">{{ post.title }}</a> </li> </ul></sectioni>';
 
-var postTemplate = '<section id="main" ><div class="view" ng-animate ng-bind-html="content"></div></section>';
+var postTemplate = '<section id="main" ><div class="view" ng-animate ng-bind-html="content"></div><div id="disqus_thread"></div></section>';
 
 var notFoundTemplate = '<section id="main"><div class="not-found">404</div></section>';
 
@@ -66,7 +69,15 @@ function PostCtrl($scope, $routeParams, $http, $sce) {
 	$scope.content = waitTemplate;
 	$http.get( '/' +  $scope.url + '.html', {cache:true}).success( function(data) {
 		$scope.content = $sce.trustAsHtml(data);
+		DISQUS.reset({
+  			reload: true,
+  			config: function () {
+    			this.page.identifier = $scope.url;
+    			this.page.url = 'http://www.psam.im/#!/post/' + $scope.url;
+  			}
+		});
 	}).error(function() {
 		$scope.content = notFoundTemplate;
 	});
 }
+
