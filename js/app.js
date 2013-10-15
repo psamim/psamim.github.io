@@ -35,6 +35,9 @@ var notFoundTemplate = '<section id="main"><div class="not-found">404</div></sec
      }).when('/post/:url*', {
 		controller: PostCtrl,
 		template: postTemplate
+     }).when('/:url*',{
+		controller: PostCtrl,
+		template: postTemplate
      }).otherwise( {
 		controller: HomeCtrl,
 		template: homeTemplate
@@ -65,7 +68,8 @@ function HomeCtrl($scope, $routeParams, $http) {
 }
 
 function PostCtrl($scope, $routeParams, $http, $sce) {
-	$scope.url = $routeParams.url;
+	$scope.url = $routeParams.url == 'about' ? '2013/09/24/about-me' : $routeParams.url;
+	console.log($scope.url);
 	$scope.content = waitTemplate;
 	$http.get( '/' +  $scope.url + '.html', {cache:true}).success( function(data) {
 		$scope.content = $sce.trustAsHtml(data);
