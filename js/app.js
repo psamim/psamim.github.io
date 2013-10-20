@@ -45,12 +45,13 @@ var notFoundTemplate = '<section id="main"><div class="not-found">404</div></sec
  });
 
 function HomeCtrl($scope, $routeParams, $http) {
+		$scope.wait = true;
 	$http.get('/js/posts.json?8', {cache:true}).success( function(data) {
 		data.tags.splice(0,1);
 		data.posts.splice(0,1);
 		$scope.tags = data.tags;
 		$scope.posts = data.posts;
-		//$scope.wait = false;
+		$scope.wait = false;
 	});
 
 	$scope.search = $routeParams.name;
@@ -85,3 +86,9 @@ function PostCtrl($scope, $routeParams, $http, $sce) {
 	});
 }
 
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44987148-1', 'psam.im');
+  ga('send', 'pageview');
