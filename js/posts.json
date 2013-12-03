@@ -34,7 +34,9 @@
 	"tags": [
 		""
 		
-		,	"android html5"
+		,	"android"
+		
+		,	"html5"
 		
 		]}
 
@@ -111,9 +113,9 @@
 "tags" : [
 	{}
 	
-	, {"name":"vim","weight":81}
+	, {"name":"vim","weight":80}
 	
-	, {"name":"javascript","weight":81}
+	, {"name":"javascript","weight":80}
 	
 	, {"name":"print","weight":65}
 	
@@ -135,7 +137,9 @@
 	
 	, {"name":"tmux","weight":65}
 	
-	, {"name":"android html5","weight":65}
+	, {"name":"android","weight":65}
+	
+	, {"name":"html5","weight":65}
 	
 	, {"name":"presentation","weight":65}
 	
