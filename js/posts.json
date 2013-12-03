@@ -29,6 +29,15 @@
 		
 		]}
 
+	, {"title":"HTML5 Mobile App Frameworks" ,
+	"url": "/2013/09/24/html5-mobile-apps",
+	"tags": [
+		""
+		
+		,	"android html5"
+		
+		]}
+
 	, {"title":"About Me" ,
 	"url": "/2013/09/24/about-me",
 	"tags": [
@@ -102,41 +111,43 @@
 "tags" : [
 	{}
 	
-	, {"name":"vim","weight":83}
+	, {"name":"vim","weight":81}
 	
-	, {"name":"javascript","weight":83}
+	, {"name":"javascript","weight":81}
 	
-	, {"name":"print","weight":66}
+	, {"name":"print","weight":65}
 	
-	, {"name":"story","weight":66}
+	, {"name":"story","weight":65}
 	
-	, {"name":"jekyll","weight":66}
+	, {"name":"jekyll","weight":65}
 	
-	, {"name":"yaml","weight":66}
+	, {"name":"yaml","weight":65}
 	
-	, {"name":"note taking","weight":66}
+	, {"name":"note taking","weight":65}
 	
-	, {"name":"icon","weight":66}
+	, {"name":"icon","weight":65}
 	
-	, {"name":"font","weight":66}
+	, {"name":"font","weight":65}
 	
-	, {"name":"css","weight":66}
+	, {"name":"css","weight":65}
 	
-	, {"name":"design","weight":66}
+	, {"name":"design","weight":65}
 	
-	, {"name":"tmux","weight":66}
+	, {"name":"tmux","weight":65}
 	
-	, {"name":"presentation","weight":66}
+	, {"name":"android html5","weight":65}
 	
-	, {"name":"html","weight":66}
+	, {"name":"presentation","weight":65}
 	
-	, {"name":"mysql","weight":66}
+	, {"name":"html","weight":65}
 	
-	, {"name":"database","weight":66}
+	, {"name":"mysql","weight":65}
 	
-	, {"name":"migration","weight":66}
+	, {"name":"database","weight":65}
 	
-	, {"name":"php","weight":66}
+	, {"name":"migration","weight":65}
+	
+	, {"name":"php","weight":65}
 	
 ]
 }
