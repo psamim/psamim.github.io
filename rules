@@ -1,8 +1,13 @@
 #BEGIN
 
 [Wildcard]
+; Facebook
 *facebook.com/*
+fbcdn.net/*
 
+; Twitter
+*twitter.com/*
+*twimg.com/*
 
 [RegExp]
 
