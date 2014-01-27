@@ -2,12 +2,13 @@
 
 [Wildcard]
 ; Facebook
-*facebook.com/*
-*fbcdn.net/*
+*facebook.com*
+*fbcdn.net*
 
 ; Twitter
-*twitter.com/*
-*twimg.com/*
+*twitter.com*
+*twimg.com*
+*t.co*
 
 [RegExp]
 
