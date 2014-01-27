@@ -3,7 +3,7 @@
 [Wildcard]
 ; Facebook
 *facebook.com/*
-fbcdn.net/*
+*fbcdn.net/*
 
 ; Twitter
 *twitter.com/*
