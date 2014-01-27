@@ -1,0 +1,10 @@
+#BEGIN
+
+[Wildcard]
+*facebook.com/*
+
+
+[RegExp]
+
+
+#END
