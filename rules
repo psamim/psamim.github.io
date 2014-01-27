@@ -1,14 +1,42 @@
 #BEGIN
 
 [Wildcard]
+
 ; Facebook
 *facebook.com*
 *fbcdn.net*
+*akamaihd.net*
+*fb.me*
 
 ; Twitter
 *twitter.com*
 *twimg.com*
 *t.co*
+
+; Reddit and Stuff
+*reddit.com*
+*imgur.com*
+
+; Wordpress and Blogs
+*wp.com*
+*wordpress.com*
+*wp.me*
+*blogspot.*
+
+; Google
+*googleusercontent.com*
+*plus.google.com*
+*youtube.com*
+*youtu.be*
+
+; Others
+*soundcloud.com*
+*kickass.to*
+*tumblr.com*
+*radiofarda.com*
+*jadi.net*
+*last.fm*
+*pinterest.com*
 
 [RegExp]
 
