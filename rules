@@ -16,6 +16,8 @@
 ; Reddit and Stuff
 *reddit.com*
 *imgur.com*
+*redditmedia.com*
+*redditstatic.com*
 
 ; Wordpress and Blogs
 *wp.com*
@@ -45,7 +47,6 @@
 *gawker.com*
 *kinja.com*
 *gawkerassets.com*
-
 
 [RegExp]
 
