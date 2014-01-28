@@ -22,21 +22,29 @@
 *wordpress.com*
 *wp.me*
 *blogspot.*
+*feedburner.com*
 
 ; Google
 *googleusercontent.com*
 *plus.google.com*
 *youtube.com*
 *youtu.be*
+*googlesyndication.com*
 
 ; Others
 *soundcloud.com*
+*last.fm*
 *kickass.to*
 *tumblr.com*
 *radiofarda.com*
 *jadi.net*
-*last.fm*
 *pinterest.com*
+
+; Lifehacker
+*lifehacker.com*
+*gawker.com*
+*kinja.com*
+
 
 [RegExp]
 
