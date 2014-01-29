@@ -52,6 +52,14 @@
 *kinja.com*
 *gawkerassets.com*
 
+; Videos
+*vimeo.com/*
+*vimeocdn.com/*
+*gravatar.com*
+
+; News
+*euronews.com/*
+
 [RegExp]
 
 
