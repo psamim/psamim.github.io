@@ -7,6 +7,7 @@
 *fbcdn.net*
 *akamaihd.net*
 *fb.me*
+*fb.com*
 
 ; Twitter
 *twitter.com*
@@ -44,6 +45,7 @@
 ; Music
 *grooveshark.com*
 *soundcloud.com*
+*sndcdn.com*
 *last.fm*
 
 ; Others
@@ -70,13 +72,16 @@
 *euronews.com*
 *bbc.co*
 *dw.de*
+*radiozamaneh.com*
 
+; Other
 *static.guim.co.uk*
 *udacity.com*
 *9gag.com*
 *cloudfront.net*
 *radiojavan.com*
 *oracle.com*
+*mp3skull.com*
 [RegExp]
 
 
