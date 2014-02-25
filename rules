@@ -8,6 +8,7 @@
 *akamaihd.net*
 *fb.me*
 *fb.com*
+*instagram.com*
 
 ; Twitter
 *twitter.com*
@@ -27,6 +28,7 @@
 *blogspot.*
 *feedburner.com*
 *blogger.com*
+*tumblr.com*
 
 ; Google
 *googleusercontent.com*
@@ -47,15 +49,8 @@
 *soundcloud.com*
 *sndcdn.com*
 *last.fm*
-
-; Others
-*kickass.to*
-*tumblr.com*
-*radiofarda.com*
-*jadi.net*
-*pinterest.com*
-*instagram.com*
-*media-imdb.com*
+*mp3skull.com*
+*radiojavan.com*
 
 ; Lifehacker
 *lifehacker.com*
@@ -66,22 +61,29 @@
 ; Videos
 *vimeo.com*
 *vimeocdn.com*
-*gravatar.com*
 
 ; News
 *euronews.com*
 *bbc.co*
 *dw.de*
 *radiozamaneh.com*
+*radiofarda.com*
+
+; 9gag
+*9gag.com*
+*9gag.tv*
 
 ; Other
 *static.guim.co.uk*
 *udacity.com*
-*9gag.com*
 *cloudfront.net*
-*radiojavan.com*
+*kickass.to*
+*jadi.net*
+*pinterest.com*
+*media-imdb.com*
 *oracle.com*
-*mp3skull.com*
+*gravatar.com*
+
 [RegExp]
 
 
