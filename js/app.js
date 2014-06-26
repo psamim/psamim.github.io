@@ -1,6 +1,6 @@
 var disqus_shortname = 'psamim';
-//var disqus_url = 'http://vvv.tobiassjosten.net/events/announcing-november-camp-2013/';
 //var disqus_developer = true ? 1 : 0;
+//
 var wikiApp = angular.module('wiki',['ngRoute','ngAnimate','ngSanitize']);
 //
 var waitTemplate = '<div ng-show="wait" class="loading"><div id="movingBallG"><div class="movingBallLineG"></div>' +
@@ -46,7 +46,7 @@ var notFoundTemplate = '<section id="main"><div class="not-found">404</div></sec
 
 function HomeCtrl($scope, $routeParams, $http) {
 		$scope.wait = true;
-	$http.get('/js/posts.json?9', {cache:true}).success( function(data) {
+	$http.get('/js/posts.json?11', {cache:true}).success( function(data) {
 		data.tags.splice(0,1);
 		data.posts.splice(0,1);
 		$scope.tags = data.tags;

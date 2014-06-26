@@ -2,7 +2,7 @@
 {}
 
 	, {"title":"MySQL database migration" ,
-	"url": "/2013/09/24/mysql-migration",
+	"url": "/wiki/2013/09/24/mysql-migration",
 	"tags": [
 		""
 		
@@ -16,8 +16,17 @@
 		
 		]}
 
+	, {"title":"Latex Workflow" ,
+	"url": "/wiki/2013/09/24/latex-workflow",
+	"tags": [
+		""
+		
+		,	"latex"
+		
+		]}
+
 	, {"title":"JS/HTML5 Presentation Systems" ,
-	"url": "/2013/09/24/js-presentations",
+	"url": "/wiki/2013/09/24/js-presentations",
 	"tags": [
 		""
 		
@@ -30,7 +39,7 @@
 		]}
 
 	, {"title":"HTML5 Mobile App Frameworks" ,
-	"url": "/2013/09/24/html5-mobile-apps",
+	"url": "/wiki/2013/09/24/html5-mobile-apps",
 	"tags": [
 		""
 		
@@ -41,14 +50,14 @@
 		]}
 
 	, {"title":"About Me" ,
-	"url": "/2013/09/24/about-me",
+	"url": "/wiki/2013/09/24/about-me",
 	"tags": [
 		""
 		
 		]}
 
 	, {"title":"Quickly open a tmux pane in Vim" ,
-	"url": "/2013/09/24/Using-tmux-and-vim",
+	"url": "/wiki/2013/09/24/Using-tmux-and-vim",
 	"tags": [
 		""
 		
@@ -59,7 +68,7 @@
 		]}
 
 	, {"title":"Some icon fonts" ,
-	"url": "/2013/09/24/Some-icon-fonts",
+	"url": "/wiki/2013/09/24/Some-icon-fonts",
 	"tags": [
 		""
 		
@@ -74,7 +83,7 @@
 		]}
 
 	, {"title":"First Post" ,
-	"url": "/2013/09/24/First-Post",
+	"url": "/wiki/2013/09/24/First-Post",
 	"tags": [
 		""
 		
@@ -89,7 +98,7 @@
 		]}
 
 	, {"title":"Detect print action in Javascript" ,
-	"url": "/2013/09/24/Detect-print-action-with-JS",
+	"url": "/wiki/2013/09/24/Detect-print-action-with-JS",
 	"tags": [
 		""
 		
@@ -100,7 +109,7 @@
 		]}
 
 	, {"title":"Paste from register in insert mode" ,
-	"url": "/2013/09/24/CTRL-R-in-Vim",
+	"url": "/wiki/2013/09/24/CTRL-R-in-Vim",
 	"tags": [
 		""
 		
@@ -113,45 +122,49 @@
 "tags" : [
 	{}
 	
-	, {"name":"vim","weight":80}
+	, {"name":"vim","weight":77}
 	
-	, {"name":"javascript","weight":80}
+	, {"name":"javascript","weight":77}
 	
-	, {"name":"print","weight":65}
+	, {"name":"print","weight":63}
 	
-	, {"name":"story","weight":65}
+	, {"name":"story","weight":63}
 	
-	, {"name":"jekyll","weight":65}
+	, {"name":"jekyll","weight":63}
 	
-	, {"name":"yaml","weight":65}
+	, {"name":"yaml","weight":63}
 	
-	, {"name":"note taking","weight":65}
+	, {"name":"note taking","weight":63}
 	
-	, {"name":"icon","weight":65}
+	, {"name":"icon","weight":63}
 	
-	, {"name":"font","weight":65}
+	, {"name":"font","weight":63}
 	
-	, {"name":"css","weight":65}
+	, {"name":"css","weight":63}
 	
-	, {"name":"design","weight":65}
+	, {"name":"design","weight":63}
 	
-	, {"name":"tmux","weight":65}
+	, {"name":"tmux","weight":63}
 	
-	, {"name":"android","weight":65}
+	, {"name":"android","weight":63}
 	
-	, {"name":"html5","weight":65}
+	, {"name":"html5","weight":63}
 	
-	, {"name":"presentation","weight":65}
+	, {"name":"presentation","weight":63}
 	
-	, {"name":"html","weight":65}
+	, {"name":"html","weight":63}
 	
-	, {"name":"mysql","weight":65}
+	, {"name":"latex","weight":63}
 	
-	, {"name":"database","weight":65}
+	, {"name":"mysql","weight":63}
 	
-	, {"name":"migration","weight":65}
+	, {"name":"database","weight":63}
 	
-	, {"name":"php","weight":65}
+	, {"name":"migration","weight":63}
+	
+	, {"name":"php","weight":63}
+	
+	, {"name":"post","weight":63}
 	
 ]
 }
