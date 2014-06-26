@@ -1,0 +1,57 @@
+<h1 class="title">Detect print action in Javascript</h1>
+<section id="main">
+	<article  itemscope itemtype="http://schema.org/BlogPosting" class="post article">
+		<div itemprop="articleBody">
+			<p>Sometimes we want to detect when a page is printed to prepare it for the user before print. Things like changing CSS or images. There are two functions available for this, <code>window.onbeforeprint</code> and <code>window.onafterprint</code>.</p>
+
+<p>These two are only available in IE and Firefox. But it can also be done in Chrome using a work around. Chrome can detect when a CSS media query matches. Using this method, the following code can detect the print media query and the print action.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">acceptTime</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">beforePrint</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">acceptTime</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;before&#39;</span><span class="p">);</span>
+        <span class="nx">acceptTime</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">setTimeout</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">acceptTime</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">,</span> <span class="mi">500</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">afterPrint</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">acceptTime</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;after&#39;</span><span class="p">);</span>
+        <span class="nx">acceptTime</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">setTimeout</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">acceptTime</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">,</span> <span class="mi">500</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">mediaQueryList</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s1">&#39;print&#39;</span><span class="p">);</span>
+    <span class="nx">mediaQueryList</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">mql</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">mql</span><span class="p">.</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">beforePrint</span><span class="p">();</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">afterPrint</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onbeforeprint</span> <span class="o">=</span> <span class="nx">beforePrint</span><span class="p">;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onafterprint</span> <span class="o">=</span> <span class="nx">afterPrint</span><span class="p">;</span>
+</code></pre></div>
+<p>The strange thing was that the <code>beforeprint</code> function was triggered two times on every match, therefore the <code>acceptTime</code> variable was added to accept changes every 500ms only once.</p>
+
+		</div>
+
+
+		<ul class="tags">
+			
+    		<li class="tag">
+            	<a href="/#/tag/javascript">javascript</a>
+    		</li>
+			
+    		<li class="tag">
+            	<a href="/#/tag/print">print</a>
+    		</li>
+			
+		</ul>
+
+	</article>
+</section>

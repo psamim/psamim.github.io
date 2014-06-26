@@ -1,0 +1,44 @@
+<h1 class="title">MySQL database migration</h1>
+<section id="main">
+	<article  itemscope itemtype="http://schema.org/BlogPosting" class="post article">
+		<div itemprop="articleBody">
+			<p>Versioning the database and using migrations is a good practice. while PHP frameworks ussually provide some methods for this, here I list some methods to have database versioning and migrations without frameworks.</p>
+
+<ul>
+<li><p><a href="http://joefreeman.co.uk/blog/2009/07/php-script-to-compare-mysql-database-schemas/">This</a> is a small PHP script to compare two MySQL database schemas. It shows the diffs visually, not very useful for actual use. It compares two databases.</p></li>
+<li><p><a href="https://github.com/idler/MMP/wiki/Description">MMP</a> is a complete PHP CLI tool which compares schemas and produces migrations based on diffs. It compares the database with its previous state and does the versiosning, too. Migrations are in plain SQL wrapped in PHP. Also it does the migrations itself. It has some minor bugs but can be a nice base for creating such tools. Creating migrations can be buggy. Needs direct access to database.</p></li>
+<li><p><a href="http://adamspiers.org/computing/mysqldiff/">mysqldiff</a> is a Perl script which compares two databases or two SQL files and produces the MySQL  migration commands based on diffs.</p></li>
+<li><p><a href="http://phinx.org/">Phinx</a> is a PHP migration tool and does not compare databases. Migrations can be in written in SQL or using the Phinx specific ORM in PHP.</p></li>
+<li><p><a href="http://www.liquibase.org/">Liquibase</a> is a java library and tool for tracking and applying database changes. It can be used from command line or even Ant or Maven. Changelogs are in JSON, YAML, SQL or XML. It does compare the database, creates the migrations and does the migrations itself.</p></li>
+<li><p><a href="http://www.doctrine-project.org/projects/migrations.html">Doctrine</a> ORM has a migration feature. It may be useful if Doctrine or Symfony framework is used.</p></li>
+<li><p><a href="http://code.google.com/p/dbdeploy/">dbdebply</a> is another tool which says manages the deployment of numbered change scripts to a SQL database, using a simple table in the database to track applied changes. The migrations are in plain SQL.</p></li>
+<li><p><a href="http://stackoverflow.com/questions/225772/compare-two-mysql-databases">This post</a> may be helpful for finding diff tools.</p></li>
+</ul>
+
+<p>Although the ability to compare the databases and producing the migrations automatically seems appealing <a href="http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html">this article</a> explains why it is not a good pratice.</p>
+
+		</div>
+
+
+		<ul class="tags">
+			
+    		<li class="tag">
+            	<a href="/#/tag/mysql">mysql</a>
+    		</li>
+			
+    		<li class="tag">
+            	<a href="/#/tag/database">database</a>
+    		</li>
+			
+    		<li class="tag">
+            	<a href="/#/tag/migration">migration</a>
+    		</li>
+			
+    		<li class="tag">
+            	<a href="/#/tag/php">php</a>
+    		</li>
+			
+		</ul>
+
+	</article>
+</section>
