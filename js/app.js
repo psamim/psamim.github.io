@@ -69,7 +69,7 @@ function HomeCtrl($scope, $routeParams, $http) {
 }
 
 function PostCtrl($scope, $routeParams, $http, $sce) {
-	$scope.url = $routeParams.url == 'about' ? '2013/09/24/about-me' : $routeParams.url;
+	$scope.url = $routeParams.url == 'about' ? 'wiki/2013/09/24/about-me' : $routeParams.url;
 	console.log($scope.url);
 	$scope.content = waitTemplate;
 	$http.get( '/' +  $scope.url + '.html', {cache:true}).success( function(data) {
