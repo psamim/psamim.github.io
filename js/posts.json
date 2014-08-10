@@ -122,49 +122,71 @@
 "tags" : [
 	{}
 	
-	, {"name":"vim","weight":850/11}
+	, {"name":"vim",
+	"weight":120.0 }
 	
-	, {"name":"javascript","weight":850/11}
+	, {"name":"javascript",
+	"weight":120.0 }
 	
-	, {"name":"print","weight":700/11}
+	, {"name":"print",
+	"weight":60.0 }
 	
-	, {"name":"story","weight":700/11}
+	, {"name":"story",
+	"weight":60.0 }
 	
-	, {"name":"jekyll","weight":700/11}
+	, {"name":"jekyll",
+	"weight":60.0 }
 	
-	, {"name":"yaml","weight":700/11}
+	, {"name":"yaml",
+	"weight":60.0 }
 	
-	, {"name":"note taking","weight":700/11}
+	, {"name":"note taking",
+	"weight":60.0 }
 	
-	, {"name":"icon","weight":700/11}
+	, {"name":"icon",
+	"weight":60.0 }
 	
-	, {"name":"font","weight":700/11}
+	, {"name":"font",
+	"weight":60.0 }
 	
-	, {"name":"css","weight":700/11}
+	, {"name":"css",
+	"weight":60.0 }
 	
-	, {"name":"design","weight":700/11}
+	, {"name":"design",
+	"weight":60.0 }
 	
-	, {"name":"tmux","weight":700/11}
+	, {"name":"tmux",
+	"weight":60.0 }
 	
-	, {"name":"android","weight":700/11}
+	, {"name":"android",
+	"weight":60.0 }
 	
-	, {"name":"html5","weight":700/11}
+	, {"name":"html5",
+	"weight":60.0 }
 	
-	, {"name":"presentation","weight":700/11}
+	, {"name":"presentation",
+	"weight":60.0 }
 	
-	, {"name":"html","weight":700/11}
+	, {"name":"html",
+	"weight":60.0 }
 	
-	, {"name":"latex","weight":700/11}
+	, {"name":"latex",
+	"weight":60.0 }
 	
-	, {"name":"mysql","weight":700/11}
+	, {"name":"mysql",
+	"weight":60.0 }
 	
-	, {"name":"database","weight":700/11}
+	, {"name":"database",
+	"weight":60.0 }
 	
-	, {"name":"migration","weight":700/11}
+	, {"name":"migration",
+	"weight":60.0 }
 	
-	, {"name":"php","weight":700/11}
+	, {"name":"php",
+	"weight":60.0 }
 	
-	, {"name":"post","weight":700/11}
+	, {"name":"post",
+	"weight":60.0 }
 	
 ]
 }
